@@ -7,19 +7,10 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMake")
 include(AddBoost)
 
 option(BUILD_TESTS "Build unit tests" ON)
-option(CCLOCK_USE_KAI "Use KAI" OFF)
-
-if (CCLOCK_USE_KAI)
-	set(KAI_BUILD_TEST_ALL OFF)
-	add_subdirectory(ChessClock/ThirdParty/KAI)
-endif()
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
-
 include_directories(${Boost_INCLUDE_DIRS})
 message(STATUS "Boost Include: ${Boost_INCLUDE_DIRS}")
-
-set(GAMBIT_DIR ${PROJECT_SOURCE_DIR}/Gambit)
 set(THIRD_PARTY ${GAMBIT_DIR}/ThirdParty)
 
 if (WIN32)
