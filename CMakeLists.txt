@@ -19,10 +19,11 @@ if (WIN32)
     add_definitions(-D_WINSOCKAPI_ -DCPPHTTPLIB_OPENSSL_SUPPORT7)
 endif()
 
-#[[
-include_directories(${GAMBIT_DIR}/Include)
 include_directories(${THIRD_PARTY}/SDL/include)
 include_directories(${THIRD_PARTY}/SDL_ttf)
+
+#[[
+include_directories(${GAMBIT_DIR}/Include)
 include_directories(${THIRD_PARTY}/json/include)
 include_directories(${THIRD_PARTY}/crossguid/include)
 include_directories(${THIRD_PARTY}/harfbuzz/src)
